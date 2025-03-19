@@ -189,6 +189,28 @@ input[type="submit"]:hover {
     background-color: #f1f1f1;
 }
 
+/* Add these styles to style.css */
+.contact-info {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.contact-details {
+    flex: 1;
+}
+
+.contact-image {
+    width: 100%; /* Ensure the image container takes full width */
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     nav {
