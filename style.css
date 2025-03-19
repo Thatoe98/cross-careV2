@@ -163,4 +163,9 @@ input[type="submit"]:hover {
     main {
         padding: 15px;
     }
+
+    .lang-button {
+        padding: 5px 8px; /* Adjust padding for smaller screens */
+        font-size: 0.9em; /* Adjust font size for smaller screens */
+    }
 }
