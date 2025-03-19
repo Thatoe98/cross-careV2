@@ -27,9 +27,13 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em; /* Increase font size */
     text-align: center; /* Center the text */
     flex-grow: 1; /* Allow the h1 to take up remaining space */
+    font-family: 'Roboto', sans-serif; /* Use a modern font */
+    font-weight: bold; /* Make the text bold */
+    letter-spacing: 1px; /* Add some letter spacing */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a 3D shadow effect */
 }
 
 nav {
