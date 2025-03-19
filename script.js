@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', () => {
             const lang = button.getAttribute('data-lang');
             if (lang === 'en') {
-                window.location.href = 'index_en.html';
+                window.location.href = 'index.html';
             } else if (lang === 'my') {
                 window.location.href = 'index_mm.html';
             }
