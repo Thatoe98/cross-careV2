@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
+    const langButtons = document.querySelectorAll('.lang-button');
 
+    // Tab switching functionality
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
             const tabId = button.getAttribute('data-tab');
@@ -24,26 +26,22 @@ document.addEventListener('DOMContentLoaded', function() {
         tabButtons[0].click();
     }
 
-    const langButtons = document.querySelectorAll('.lang-button');
-    const langContents = document.querySelectorAll('.lang');
-
+    // Language switching functionality
     langButtons.forEach(button => {
         button.addEventListener('click', () => {
             const lang = button.getAttribute('data-lang');
-
-            langButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            langContents.forEach(content => {
-                if (content.classList.contains(lang)) {
-                    content.style.display = 'block';
-                } else {
-                    content.style.display = 'none';
-                }
-            });
+            if (lang === 'en') {
+                window.location.href = 'index_en.html';
+            } else if (lang === 'my') {
+                window.location.href = 'index_mm.html';
+            }
         });
     });
 
-    // Set default language to English
-    document.querySelector('.lang-button[data-lang="en"]').click();
+    // Optionally, set the active language button based on the current page
+    const currentLang = document.documentElement.lang;
+    const activeLangButton = document.querySelector(`.lang-button[data-lang="${currentLang}"]`);
+    if (activeLangButton) {
+        activeLangButton.classList.add('active');
+    }
 });
