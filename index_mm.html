@@ -13,8 +13,13 @@
         <img src="./cclogo.jpg" alt="Logo" class="header-logo">
         <h1>Cross-Care Medical Consultant</h1>
         <div class="language-switcher">
-            <button class="lang-button" data-lang="en">English</button>
-            <button class="lang-button" data-lang="my">မြန်မာ</button>
+            <button class="lang-button" id="current-lang-button">
+                <i class="fas fa-flag-mm"></i>
+            </button>
+            <div class="dropdown-content" id="lang-dropdown">
+                <button class="lang-option" data-lang="en"><i class="fas fa-flag-uk"></i> English</button>
+                <button class="lang-option" data-lang="my"><i class="fas fa-flag-mm"></i> မြန်မာ</button>
+            </div>
         </div>
     </header>
 

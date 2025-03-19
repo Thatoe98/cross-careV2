@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
-    const langButtons = document.querySelectorAll('.lang-button');
+    const langButtons = document.querySelectorAll('.lang-option');
+    const currentLangButton = document.getElementById('current-lang-button');
+    const langDropdown = document.getElementById('lang-dropdown');
 
     // Tab switching functionality
     tabButtons.forEach(button => {
@@ -38,10 +40,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Toggle dropdown visibility
+    currentLangButton.addEventListener('click', () => {
+        langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
     // Optionally, set the active language button based on the current page
     const currentLang = document.documentElement.lang;
-    const activeLangButton = document.querySelector(`.lang-button[data-lang="${currentLang}"]`);
+    const activeLangButton = document.querySelector(`.lang-option[data-lang="${currentLang}"]`);
     if (activeLangButton) {
-        activeLangButton.classList.add('active');
+        currentLangButton.innerHTML = activeLangButton.innerHTML;
     }
 });
