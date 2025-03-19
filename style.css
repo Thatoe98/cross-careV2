@@ -10,21 +10,26 @@ body {
 header {
     display: flex;
     align-items: center;
-    background-color: #007bff;
+    justify-content: center; /* Center the content horizontally */
+    background: linear-gradient(to right, #007bff, #ff0000); /* Gradient from blue to red */
     color: white;
     padding: 1em 2em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Add relative positioning to allow absolute positioning of language switcher */
 }
 
 .header-logo {
-    margin-right: 20px;
-    height: 50px; /* Adjust the height as needed */
+    position: absolute; /* Position the logo absolutely */
+    left: 20px; /* Adjust the position as needed */
+    height: 70px; /* Increase the height */
     width: auto; /* Maintain aspect ratio */
 }
 
 header h1 {
     margin: 0;
     font-size: 2em;
+    text-align: center; /* Center the text */
+    flex-grow: 1; /* Allow the h1 to take up remaining space */
 }
 
 nav {
@@ -130,8 +135,8 @@ input[type="submit"]:hover {
 }
 
 .language-switcher {
-    position: relative;
-    margin-left: auto;
+    position: absolute; /* Position it absolutely to avoid affecting the centering */
+    right: 20px; /* Adjust the position as needed */
     display: flex;
     align-items: center;
 }
@@ -196,7 +201,7 @@ input[type="submit"]:hover {
     }
 
     .lang-button {
-        padding: 5px 5px; /* Adjust padding for smaller screens */
+        padding: 5px 8px; /* Adjust padding for smaller screens */
         font-size: 1.2em; /* Adjust font size for smaller screens */
     }
 }
