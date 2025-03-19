@@ -196,7 +196,7 @@ input[type="submit"]:hover {
     }
 
     .lang-button {
-        padding: 5px 8px; /* Adjust padding for smaller screens */
+        padding: 5px 5px; /* Adjust padding for smaller screens */
         font-size: 1.2em; /* Adjust font size for smaller screens */
     }
 }
