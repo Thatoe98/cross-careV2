@@ -137,11 +137,20 @@ input[type="submit"]:hover {
 }
 
 .lang-button {
-    background-color: transparent;
+    background-color: #f54c4c;
     border: none;
     cursor: pointer;
     font-size: 1.5em;
     color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lang-button:hover {
+    background-color: #ff0000;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content {
