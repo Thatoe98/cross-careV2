@@ -5,11 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const currentLangButton = document.getElementById('current-lang-button');
     const langDropdown = document.getElementById('lang-dropdown');
 
-    // Initialize AOS
-    AOS.init({
-        duration: 800, // Set animation duration
-    });
-
     // Tab switching functionality
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -17,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             tabContents.forEach(content => {
                 content.classList.remove('active');
-                content.removeAttribute('data-aos'); // Remove AOS animation
             });
 
             tabButtons.forEach(btn => {
@@ -27,12 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const activeTab = document.getElementById(tabId);
             activeTab.classList.add('active');
             button.classList.add('active');
-
-            // Trigger AOS animation
-            setTimeout(() => {
-                activeTab.setAttribute('data-aos', 'fade-up');
-                AOS.refresh(); // Refresh AOS to apply animations
-            }, 10); // Small delay to ensure the class is added before animation
         });
     });
 
