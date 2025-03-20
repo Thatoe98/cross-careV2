@@ -12,10 +12,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background: linear-gradient(to right, #007bff, #ff0000); /* Gradient from blue to red */
-    color: white;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative; /* Add relative positioning to allow absolute positioning of language switcher */
+    background-color: #007bff; /* Set the header background color */
+    color: white; /* Set the header text color */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .header-content {
@@ -33,7 +32,6 @@ header {
 .header-logo {
     height: 70px;
     width: auto;
-    margin-left: 20px;
 }
 
 header h1 {
@@ -47,27 +45,34 @@ header h2 {
 }
 
 nav {
-    background-color: #fff;
+    background-color: #007bff; /* Match the header background color */
     padding: 15px 20px;
     text-align: center;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* Tab buttons styles */
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 0 20px;
+    flex-grow: 1; /* Allow the tab buttons to grow and fill space */
+}
+
 .tab-button {
-    background-color: #e0e0e0;
+    background-color: #1901ee;
     border: none;
     padding: 12px 25px;
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 1em;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.1s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for 3D effect */
+    color: white;
+    transition: background-color 0.3s ease;
 }
 
 .tab-button:hover {
-    background-color: #d0d0d0;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+    background-color: #fa6969;
 }
 
 .tab-button:active {
@@ -77,7 +82,7 @@ nav {
 }
 
 .tab-button.active {
-    background-color: #007bff;
+    background-color: #e40808; /* Slightly darker shade for active state */
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Maintain shadow for active state */
 }
@@ -162,14 +167,14 @@ input[type="submit"]:hover {
 }
 
 .language-switcher {
-    position: absolute; /* Position it absolutely to avoid affecting the centering */
-    right: 20px; /* Adjust the position as needed */
     display: flex;
     align-items: center;
+    position: absolute; /* Position it absolutely to avoid affecting the centering */
+    right: 20px; /* Adjust the position as needed */
 }
 
 .lang-button {
-    background-color: #f54c4c;
+    background-color: #3a04b0;
     border: none;
     cursor: pointer;
     font-size: 1.5em;
@@ -234,6 +239,15 @@ input[type="submit"]:hover {
     border-radius: 8px;
 }
 
+/* Remove sidebar styles */
+.sidebar {
+    display: none;
+}
+
+.sidebar-toggle {
+    display: none;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     nav {
@@ -281,6 +295,17 @@ input[type="submit"]:hover {
 
     .contact-image {
         width: 100%;
+    }
+
+    .tab-buttons {
+        flex-direction: column; /* Stack tab buttons vertically */
+        align-items: center;
+        width: 100%; /* Make tab buttons full width */
+    }
+
+    .tab-button {
+        width: 100%; /* Make tab buttons full width */
+        text-align: center;
     }
 }
 
