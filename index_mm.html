@@ -13,8 +13,13 @@
 </head>
 <body>
     <header>
-        <img src="./cclogo.jpg" alt="Logo" class="header-logo">
-        <h1>Cross-Care Medical Consultant</h1>
+        <div class="header-content">
+            <img src="./cclogo.jpg" alt="Logo" class="header-logo">
+            <div class="header-text">
+                <h1>Cross-Care</h1>
+                <h2>Medical Services</h2>
+            </div>
+        </div>
         <div class="language-switcher">
             <button class="lang-button" id="current-lang-button">
                 <i class="fas fa-flag-mm"></i>
@@ -26,7 +31,11 @@
         </div>
     </header>
 
-    <nav>
+    <button class="sidebar-toggle" id="sidebar-toggle">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <nav class="sidebar" id="sidebar">
         <button class="tab-button" data-tab="about">ကျွန်ုပ်တို့အကြောင်း</button>
         <button class="tab-button" data-tab="hospitals">ဆေးရုံများ</button>
         <button class="tab-button" data-tab="services">ဝန်ဆောင်မှုများ</button>
@@ -34,7 +43,7 @@
     </nav>
 
     <main>
-        <section id="about" class="tab-content">
+        <section id="about" class="tab-content active">
             <h2>ကျွန်ုပ်တို့အကြောင်း</h2>
             <p>ကျွန်ုပ်တို့သည် မြန်မာနိုင်ငံမှ လူများကို ထိုင်းနိုင်ငံတွင် အရည်အသွေးမြင့် ဆေးဘက်ဆိုင်ရာ ပြုစုစောင့်ရှောက်မှုများ ရရှိစေရန် ကူညီပေးရန် အတတ်နိုင်ဆုံး ကြိုးပမ်းနေပါသည်။</p>
             <p>ကျွန်ုပ်တို့သည် မြန်မာနိုင်ငံ၏ ယဉ်ကျေးမှုနှင့် ဘာသာစကားကို နားလည်ပြီး ထိုင်းနိုင်ငံ၏ ဆေးဘက်ဆိုင်ရာ စနစ်ကို နားလည်သော အဖွဲ့အစည်းတစ်ခုဖြစ်ပါသည်။</p>
