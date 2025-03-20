@@ -9,31 +9,41 @@ body {
 
 header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center; /* Center the content horizontally */
+    padding: 10px 20px;
     background: linear-gradient(to right, #007bff, #ff0000); /* Gradient from blue to red */
     color: white;
-    padding: 1em 2em;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative; /* Add relative positioning to allow absolute positioning of language switcher */
 }
 
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px; /* Add margin to the left of the text */
+}
+
 .header-logo {
-    position: absolute; /* Position the logo absolutely */
-    left: 20px; /* Adjust the position as needed */
-    height: 70px; /* Increase the height */
-    width: auto; /* Maintain aspect ratio */
+    height: 70px;
+    width: auto;
+    margin-left: 20px;
 }
 
 header h1 {
+    font-size: 1.5em; /* Smaller font size */
     margin: 0;
-    font-size: 2.5em; /* Increase font size */
-    text-align: center; /* Center the text */
-    flex-grow: 1; /* Allow the h1 to take up remaining space */
-    font-family: 'Roboto', sans-serif; /* Use a modern font */
-    font-weight: bold; /* Make the text bold */
-    letter-spacing: 1px; /* Add some letter spacing */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a 3D shadow effect */
+}
+
+header h2 {
+    font-size: 1em; /* Adjust font size */
+    margin: 0;
 }
 
 nav {
