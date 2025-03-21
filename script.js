@@ -46,6 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
         langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
     });
 
+    // Close the dropdown if clicked outside
+    document.addEventListener('click', function(event) {
+        if (!currentLangButton.contains(event.target) && !langDropdown.contains(event.target)) {
+            langDropdown.style.display = 'none';
+        }
+    });
+
     // Optionally, set the active language button based on the current page
     const currentLang = document.documentElement.lang;
     const activeLangButton = document.querySelector(`.lang-option[data-lang="${currentLang}"]`);
