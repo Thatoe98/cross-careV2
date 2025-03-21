@@ -248,20 +248,59 @@ img.ccabout {
 
 .sidebar {
     display: none;
+    position: fixed;
+    top: 0;
+    right: 0; /* Set the sidebar to the right side */
+    height: 100%;
+    width: 250px;
+    background-color: #007bff;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1); /* Adjust shadow direction */
+    z-index: 1000;
+    transform: translateX(100%); /* Adjust transform direction */
+    transition: transform 0.3s ease;
+}
+
+.sidebar.active {
+    transform: translateX(0);
 }
 
 .sidebar-toggle {
     display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px; /* Set the toggle button to the right side */
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.sidebar-toggle.active {
+    display: block;
+}
+
+.sidebar .tab-button {
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin: 10px 0;
 }
 
 @media (max-width: 768px) {
     nav {
+        display: none;
         padding: 10px;
     }
 
-    .tab-button {
-        padding: 8px 15px;
-        font-size: 0.9em;
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .tab-buttons {
+        display: none;
     }
 
     main {

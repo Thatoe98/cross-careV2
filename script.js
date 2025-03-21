@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const currentLangButton = document.getElementById('current-lang-button');
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
 
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -34,4 +36,8 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (currentLang === 'my') {
         currentLangButton.innerHTML = '<i class="fas fa-flag-mm"></i> မြန်မာ';
     }
+
+    sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+    });
 });
