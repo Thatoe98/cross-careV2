@@ -3,91 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cross-Care</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <title>Cross-Care Medical Consultant</title>
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/tooplate-infinite-loop.css">
     <meta name="description" content="Cross-Care Medical Consultant helps people from Myanmar access quality medical care in Thailand.">
     <meta name="keywords" content="medical care, Myanmar, Thailand, hospitals, consultation">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <img src="./images/cclogo.jpg" alt="Logo" class="header-logo">
-            <div class="header-text">
-                <h1>Cross-Care</h1>
-                <h2>Medical Services</h2>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">
+        <div class="container">
+            <div class="tm-next">
+                <a href="#infinite" class="navbar-brand">Cross-Care</a>
             </div>
-            <div class="tab-buttons">
-                <button class="tab-button" data-tab="about">About Us</button>
-                <button class="tab-button" data-tab="hospitals">Hospitals</button>
-                <button class="tab-button" data-tab="services">Services</button>
-                <button class="tab-button" data-tab="contact">Contact Us</button>
-            </div>
-        </div>
-        <div class="language-switcher">
-            <button class="lang-button" id="current-lang-button">
-                <i class="fas fa-flag-uk"></i> English
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars navbar-toggler-icon"></i>
             </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link tm-nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tm-nav-link" href="#hospitals">Hospitals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tm-nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link tm-nav-link" href="#contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="lang-button" id="current-lang-button">
+                            <i class="fas fa-flag-uk"></i> English
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </header>
+    </nav>
 
-    <div class="sidebar">
-        <button class="tab-button" data-tab="about">About Us</button>
-        <button class="tab-button" data-tab="hospitals">Hospitals</button>
-        <button class="tab-button" data-tab="services">Services</button>
-        <button class="tab-button" data-tab="contact">Contact Us</button>
-    </div>
-    <button class="sidebar-toggle">☰</button>
+    <!-- Hero section -->
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+        <div class="text-center tm-hero-text-container">
+            <div class="tm-hero-text-container-inner">
+                <h2 class="tm-hero-title">Cross-Care</h2>
+                <p class="tm-hero-subtitle">Medical Services</p>
+            </div>
+        </div>
+    </section>
 
     <main>
-        <section id="about" class="tab-content">
-            <h2>About Us</h2>
-            <p>We are dedicated to helping people from Myanmar access quality medical care in Thailand. We understand the challenges and aim to provide seamless assistance.</p>
-            <p>We are a team that understands the culture and language of Myanmar, and the medical system of Thailand.</p>
-        </section>
-
-        <section id="hospitals" class="tab-content">
-            <h2>Hospitals</h2>
-            <p>We work with leading hospitals in Thailand, including:</p>
-            <ul>
-                <li>[Hospital 1 Name] - [Brief Description]</li>
-                <li>[Hospital 2 Name] - [Brief Description]</li>
-                <li>[Hospital 3 Name] - [Brief Description]</li>
-            </ul>
-        </section>
-
-        <section id="services" class="tab-content">
-            <h2>Services</h2>
-            <p>Our services include:</p>
-            <ul>
-                <li><i class="fas fa-stethoscope"></i> Medical consultation arrangements</li>
-                <li><i class="fas fa-calendar-alt"></i> Hospital appointment scheduling</li>
-                <li><i class="fas fa-comments"></i> Translation and interpretation services</li>
-                <li><i class="fas fa-plane"></i> Travel and accommodation assistance</li>
-                <li><i class="fas fa-medkit"></i> Post-treatment support</li>
-            </ul>
-        </section>
-
-        <section id="contact" class="tab-content">
-            <h2>Contact Us</h2>
-            <div class="contact-info">
-                <div class="contact-details">
-                    <p>Email: [Your Email]</p>
-                    <p>Phone: <a href="tel:+959891164676">+959 8911 64676</a></p>
-                    <p>Bangkok Phone: <a href="tel:+669409201849">+66 094 092 01849</a></p>
-                    <p>Viber: <a href="tel:+959790630413">+959 790630413</a></p>
-                    <p>Line: <a href="tel:+669409201849">+66 094 092 01849</a></p>
-                    <p>Address: Thu Kha Clinic. 1/A Thu Kha Street, Hlaing, Yangon</p>
-                    <p>Our Facebook page: <a href="https://www.facebook.com/share/1D8nLa1aMj/" target="_blank">Cross-Care Medical Services <i class="fab fa-facebook"></i></a></p>
+        <section id="about" class="tm-section-pad-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="tm-text-primary tm-section-title mb-4">About Us</h2>
+                        <p>We are dedicated to helping people from Myanmar access quality medical care in Thailand. We understand the challenges and aim to provide seamless assistance.</p>
+                        <p>We are a team that understands the culture and language of Myanmar, and the medical system of Thailand.</p>
+                    </div>
                 </div>
             </div>
-            <img src="images/ccabout.jpg" alt="CC About" class="ccabout">
+        </section>
+
+        <section id="hospitals" class="tm-section-pad-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="tm-text-primary tm-section-title mb-4">Hospitals</h2>
+                        <p>We work with leading hospitals in Thailand, including:</p>
+                        <ul>
+                            <li>[Hospital 1 Name] - [Brief Description]</li>
+                            <li>[Hospital 2 Name] - [Brief Description]</li>
+                            <li>[Hospital 3 Name] - [Brief Description]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="tm-section-pad-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="tm-text-primary tm-section-title mb-4">Services</h2>
+                        <ul>
+                            <li><i class="fas fa-stethoscope"></i> Medical consultation arrangements</li>
+                            <li><i class="fas fa-calendar-alt"></i> Hospital appointment scheduling</li>
+                            <li><i class="fas fa-comments"></i> Translation and interpretation services</li>
+                            <li><i class="fas fa-plane"></i> Travel and accommodation assistance</li>
+                            <li><i class="fas fa-medkit"></i> Post-treatment support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="tm-section-pad-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="tm-text-primary tm-section-title mb-4">Contact Us</h2>
+                        <div class="contact-info">
+                            <div class="contact-details">
+                                <p>Email: [Your Email]</p>
+                                <p>Phone: <a href="tel:+959891164676">+959 8911 64676</a></p>
+                                <p>Bangkok Phone: <a href="tel:+669409201849">+66 094 092 01849</a></p>
+                                <p>Viber: <a href="tel:+959790630413">+959 790630413</a></p>
+                                <p>Line: <a href="tel:+669409201849">+66 094 092 01849</a></p>
+                                <p>Address: Thu Kha Clinic. 1/A Thu Kha Street, Hlaing, Yangon</p>
+                                <p>Our Facebook page: <a href="https://www.facebook.com/share/1D8nLa1aMj/" target="_blank">Cross-Care Medical Services <i class="fab fa-facebook"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
+    <footer class="text-center small tm-footer">
+        <p class="mb-0">
+            Copyright &copy; 2025 Cross-Care Medical Consultant
+        </p>
+    </footer>
+
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/script.js"></script>
     <script>
         AOS.init();
     </script>
