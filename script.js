@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const currentLangButton = document.getElementById('current-lang-button');
 
-    // Scroll to section functionality
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
             const tabId = button.getAttribute('data-tab');
@@ -11,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Language switching functionality
     currentLangButton.addEventListener('click', () => {
         const currentLang = document.documentElement.lang;
         if (currentLang === 'en') {
@@ -21,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Add touch event listener for mobile devices
     currentLangButton.addEventListener('touchstart', () => {
         const currentLang = document.documentElement.lang;
         if (currentLang === 'en') {
@@ -31,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Optionally, set the active language button based on the current page
     const currentLang = document.documentElement.lang;
     if (currentLang === 'en') {
         currentLangButton.innerHTML = '<i class="fas fa-flag-uk"></i> English';

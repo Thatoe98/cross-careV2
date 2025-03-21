@@ -12,46 +12,47 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #007bff; /* Set the header background color */
-    color: white; /* Set the header text color */
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    background-color: #007bff;
+    color: white;
+    flex-wrap: wrap;
 }
 
 .header-content {
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Adjust to space between elements */
 }
 
 .header-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: left 19px; /* Add margin to the left of the text */
+    margin-left: 19px;
 }
 
 .header-logo {
-    height: 70px;
+    height: 3.1em; /* Match the height of the h1 element */
     width: auto;
+    margin-right: 10px;
 }
 
 header h1 {
-    font-size: 1.5em; /* Smaller font size */
+    font-size: 1.5em;
     margin: 0;
 }
 
 header h2 {
-    font-size: 1em; /* Adjust font size */
+    font-size: 1em;
     margin: 0;
 }
 
 nav {
-    background-color: #007bff; /* Match the header background color */
+    background-color: #007bff;
     padding: 15px 20px;
     text-align: center;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-/* Tab buttons styles */
 .tab-buttons {
     display: flex;
     justify-content: flex-start;
@@ -61,11 +62,11 @@ nav {
 .tab-button {
     background-color: #1901ee;
     border: none;
-    padding: 8px 15px; /* Adjust padding for smaller buttons */
+    padding: 8px 15px;
     margin: 5px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 0.9em; /* Adjust font size for smaller buttons */
+    font-size: 0.9em;
     color: white;
     transition: background-color 0.3s ease;
 }
@@ -76,14 +77,14 @@ nav {
 
 .tab-button:active {
     background-color: #c0c0c0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Decrease shadow on active */
-    transform: translateY(2px); /* Move button down on active */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
 }
 
 .tab-button.active {
-    background-color: #e40808; /* Slightly darker shade for active state */
+    background-color: #e40808;
     color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Maintain shadow for active state */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 main {
@@ -96,13 +97,13 @@ main {
 }
 
 .tab-content {
-    display: block; /* Make all tab contents visible */
+    display: block;
     padding: 20px;
-    scroll-margin-top: 70px; /* Adjust for fixed header */
-    background-color: #fff; /* Add background color */
-    border-radius: 8px; /* Add border radius */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add box shadow */
-    margin-bottom: 20px; /* Add margin between sections */
+    scroll-margin-top: 70px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
 .tab-content.active {
@@ -134,7 +135,7 @@ label {
 input[type="text"],
 input[type="email"],
 textarea {
-    width: calc(100% - 22px); /* Adjust for padding and border */
+    width: calc(100% - 22px);
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ddd;
@@ -173,8 +174,8 @@ input[type="submit"]:hover {
 .language-switcher {
     display: flex;
     align-items: center;
-    position: absolute; /* Position it absolutely to avoid affecting the centering */
-    right: 20px; /* Adjust the position as needed */
+    position: absolute;
+    right: 20px;
 }
 
 .lang-button {
@@ -221,10 +222,9 @@ input[type="submit"]:hover {
     background-color: #f1f1f1;
 }
 
-/* Add these styles to style.css */
 .contact-info {
     display: flex;
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column;
     align-items: flex-start;
     gap: 20px;
 }
@@ -233,17 +233,19 @@ input[type="submit"]:hover {
     flex: 1;
 }
 
-.contact-image {
-    width: 100%; /* Ensure the image container takes full width */
-}
-
 .contact-image img {
     width: 100%;
     height: auto;
     border-radius: 8px;
 }
 
-/* Remove sidebar styles */
+img.ccabout {
+    max-width: 100%; /* Adjust the max-width to make the image smaller */
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px; /* Add margin to separate from other content */
+}
+
 .sidebar {
     display: none;
 }
@@ -252,15 +254,14 @@ input[type="submit"]:hover {
     display: none;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     nav {
         padding: 10px;
     }
 
     .tab-button {
-        padding: 8px 15px; /* Adjust padding for smaller buttons */
-        font-size: 0.9em; /* Adjust font size for smaller buttons */
+        padding: 8px 15px;
+        font-size: 0.9em;
     }
 
     main {
@@ -268,68 +269,29 @@ input[type="submit"]:hover {
     }
 
     header {
-        flex-direction: column; /* Stack elements vertically */
-        padding: 1em; /* Adjust padding */
+        flex-direction: column;
+        padding: 1em;
     }
 
     .header-logo {
-        position: static; /* Remove absolute positioning */
-        margin-bottom: 10px; /* Add margin below the logo */
-        height: 50px; /* Adjust the height */
-    }
-
-    header h1 {
-        font-size: 1.5em; /* Adjust font size */
-        margin-bottom: 10px; /* Add margin below the heading */
-    }
-
-    .language-switcher {
-        position: static; /* Remove absolute positioning */
-        margin-top: 10px; /* Add margin above the language switcher */
-    }
-
-    .lang-button {
-        padding: 5px 8px; /* Adjust padding for smaller screens */
-        font-size: 1.2em; /* Adjust font size for smaller screens */
-    }
-
-    .contact-info {
-        flex-direction: column;
-    }
-
-    .contact-image {
-        width: 100%;
-    }
-
-    .tab-buttons {
-        flex-direction: column; /* Stack tab buttons vertically */
-        align-items: center;
-        width: 100%; /* Make tab buttons full width */
-    }
-
-    .tab-button {
-        width: 100%; /* Make tab buttons full width */
-        text-align: center;
-    }
-}
-
-/* Add media queries for responsive design */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .header-logo {
+        position: static;
+        margin-bottom: 10px;
         height: 50px;
     }
 
     header h1 {
         font-size: 1.5em;
+        margin-bottom: 10px;
     }
 
     .language-switcher {
+        position: static;
         margin-top: 10px;
+    }
+
+    .lang-button {
+        padding: 5px 8px;
+        font-size: 1.2em;
     }
 
     .contact-info {
@@ -341,14 +303,14 @@ input[type="submit"]:hover {
     }
 
     .tab-buttons {
-        flex-direction: column; /* Stack tab buttons vertically */
+        flex-direction: column;
         align-items: center;
-        width: 100%; /* Make tab buttons full width */
-        margin-top: 10px; /* Add margin to separate from header */
+        width: 100%;
+        margin-top: 10px;
     }
 
     .tab-button {
-        width: 100%; /* Make tab buttons full width */
+        width: 100%;
         text-align: center;
     }
 
@@ -373,5 +335,5 @@ input[type="submit"]:hover {
 }
 
 html {
-    scroll-behavior: smooth; /* Enable smooth scrolling */
+    scroll-behavior: smooth;
 }
