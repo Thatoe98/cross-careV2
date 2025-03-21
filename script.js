@@ -46,8 +46,20 @@ document.addEventListener('DOMContentLoaded', function() {
         langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
     });
 
+    // Add touch event listener for mobile devices
+    currentLangButton.addEventListener('touchstart', () => {
+        langDropdown.style.display = langDropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
     // Close the dropdown if clicked outside
     document.addEventListener('click', function(event) {
+        if (!currentLangButton.contains(event.target) && !langDropdown.contains(event.target)) {
+            langDropdown.style.display = 'none';
+        }
+    });
+
+    // Add touch event listener for mobile devices
+    document.addEventListener('touchstart', function(event) {
         if (!currentLangButton.contains(event.target) && !langDropdown.contains(event.target)) {
             langDropdown.style.display = 'none';
         }
