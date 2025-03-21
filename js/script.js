@@ -12,3 +12,17 @@ $(document).ready(function() {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const langButton = document.getElementById("current-lang-button");
+    if (langButton) {
+        langButton.addEventListener("click", function() {
+            const currentLang = document.documentElement.lang;
+            if (currentLang === "my") {
+                window.location.href = "index.html"; // Switch to English version
+            } else {
+                window.location.href = "index_mm.html"; // Switch to Myanmar version
+            }
+        });
+    }
+});
