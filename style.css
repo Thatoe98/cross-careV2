@@ -334,4 +334,35 @@ input[type="submit"]:hover {
     .contact-image {
         width: 100%;
     }
+
+    .tab-buttons {
+        flex-direction: column; /* Stack tab buttons vertically */
+        align-items: center;
+        width: 100%; /* Make tab buttons full width */
+        margin-top: 10px; /* Add margin to separate from header */
+    }
+
+    .tab-button {
+        width: 100%; /* Make tab buttons full width */
+        text-align: center;
+    }
+
+    .tab-buttons {
+        position: relative;
+        top: 10px;
+        margin: 0 auto;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tab-buttons-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .tab-button {
+        width: 100%;
+        text-align: center;
+    }
 }
