@@ -26,7 +26,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 20px; /* Add margin to the left of the text */
+    margin: left 19px; /* Add margin to the left of the text */
 }
 
 .header-logo {
@@ -96,8 +96,13 @@ main {
 }
 
 .tab-content {
-    display: none;
+    display: block; /* Make all tab contents visible */
     padding: 20px;
+    scroll-margin-top: 70px; /* Adjust for fixed header */
+    background-color: #fff; /* Add background color */
+    border-radius: 8px; /* Add border radius */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add box shadow */
+    margin-bottom: 20px; /* Add margin between sections */
 }
 
 .tab-content.active {
@@ -365,4 +370,8 @@ input[type="submit"]:hover {
         width: 100%;
         text-align: center;
     }
+}
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
 }
