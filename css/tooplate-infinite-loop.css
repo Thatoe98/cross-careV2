@@ -724,3 +724,11 @@ p {
     text-shadow: 1px 1px 3px #333;
     color: #ff0000; /* Red theme */
 }
+
+@media (max-width: 576px) {
+  .your-background-class {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
