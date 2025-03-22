@@ -5,11 +5,45 @@ $(document).ready(function() {
             event.preventDefault();
             var hash = this.hash;
             $('html, body').animate({
-                scrollTop: $(hash).offset().top
+                scrollTop: $(hash).offset().top - $('.tm-navbar').outerHeight() // Adjust scroll position to account for fixed navbar
             }, 800, function(){
                 window.location.hash = hash;
             });
         }
+    });
+
+    // Smooth scrolling for hero section link
+    $('a[href="#infinite"]').on('click', function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#infinite').offset().top - $('.tm-navbar').outerHeight() // Adjust scroll position to account for fixed navbar
+        }, 800);
+    });
+
+    // Initialize slick carousel for Leadership Team
+    $('.tm-testimonials-carousel').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: '<button class="carousel-arrow left-arrow"><i class="fas fa-chevron-left"></i></button>',
+        nextArrow: '<button class="carousel-arrow right-arrow"><i class="fas fa-chevron-right"></i></button>',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
     });
 });
 
@@ -25,4 +59,74 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const currentLangButton = document.getElementById('current-lang-button');
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabId = button.getAttribute('data-tab');
+            const section = document.getElementById(tabId);
+            section.scrollIntoView({ behavior: 'smooth' });
+            sidebar.classList.remove('active'); // Close sidebar on tab click
+        });
+    });
+
+    currentLangButton.addEventListener('click', () => {
+        const currentLang = document.documentElement.lang;
+        if (currentLang === 'en') {
+            window.location.href = 'index_mm.html';
+        } else if (currentLang === 'my') {
+            window.location.href = 'index.html';
+        }
+    });
+
+    currentLangButton.addEventListener('touchstart', () => {
+        const currentLang = document.documentElement.lang;
+        if (currentLang === 'en') {
+            window.location.href = 'index_mm.html';
+        } else if (currentLang === 'my') {
+            window.location.href = 'index.html';
+        }
+    });
+
+    const currentLang = document.documentElement.lang;
+    if (currentLang === 'en') {
+        currentLangButton.innerHTML = '<i class="fas fa-flag-uk"></i> English';
+    } else if (currentLang === 'my') {
+        currentLangButton.innerHTML = '<i class="fas fa-flag-mm"></i> မြန်မာ';
+    }
+
+    sidebarToggle.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+    });
+
+    // Carousel functionality
+    const carouselInner = document.querySelector('.carousel-inner');
+    const carouselItems = document.querySelectorAll('.carousel-item');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        const offset = -currentIndex * 100;
+        carouselInner.style.transform = `translateX(${offset}%)`;
+    }
+
+    leftArrow.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
+        updateCarousel();
+    });
+
+    rightArrow.addEventListener('click', () => {
+        currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
+        updateCarousel();
+    });
+
+    // Initialize carousel
+    updateCarousel();
 });

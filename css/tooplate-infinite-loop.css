@@ -15,6 +15,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  padding-top: 80px; /* Adjust this value to match the height of your navbar */
 }
 a {
   transition: all 0.3s ease;
@@ -55,7 +56,7 @@ blockquote {
 }
 
 .tm-text-primary {
-  color: #007bff; /* Change primary text color to blue */
+  color: #ff0505; /* Change primary text color to blue */
 }
 
 .tm-font-big {
@@ -78,6 +79,7 @@ blockquote {
 
 .tm-navbar {
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 1000;
   background-color: transparent;
@@ -109,17 +111,17 @@ blockquote {
 }
 
 .tm-nav-link {
-  color: #007bff; /* Change nav link color to blue */
+  color: #ff0000; /* Change nav link color to red */
 }
 
 .tm-navbar.scroll .tm-nav-link {
-  color: #369;
+  color: #ff0000; /* Keep the color red when scrolled */
 }
 
 .tm-navbar.scroll .tm-nav-link:hover,
 .tm-navbar.scroll .tm-nav-link.current,
 .tm-nav-link:hover {
-  color: #0056b3; /* Slightly darker blue on hover */
+  color: #cc0000; /* Slightly darker red on hover */
   background-color: transparent; /* Remove background color on hover */
 }
 
@@ -144,13 +146,15 @@ blockquote {
 
 /* Hero */
 
-#infinite {
-	background-color: #222;
-  background-image: url(../img/infinite-loop-01.jpg);
+.tm-hero-section {
+  background-image: url('../images/medical_background.jpg');
+  background-size: cover; /* Ensure the background covers the entire section */
+  background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  min-height: 375px;
-  position: relative;
+  min-height: 100vh; /* Ensure the section covers the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media (min-height: 600px) and (min-width: 1920px) {
@@ -183,7 +187,7 @@ blockquote {
   }
 }
 
-.tm-hero-text-container {
+tm-hero-text-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -192,16 +196,17 @@ blockquote {
 }
 
 .tm-hero-text-container-inner {
-  margin-top: -90px;
+  margin-top: 50px; /* Adjust this value to move the text lower */
 }
 
 .tm-hero-title {
   font-size: 3.5rem;
-  text-shadow: 2px 2px 2px #333;
+  color: rgb(255, 8, 8); /* Change hero title font color to red */
 }
 
 .tm-hero-subtitle {
-  text-shadow: 2px 2px 2px #333;
+  font-size: 1.5rem;
+  color: #ff0000; /* Change hero subtitle font color to red */
 }
 
 .tm-intro-next {
@@ -585,11 +590,13 @@ figure.effect-honey:hover h2 i {
 }
 
 .tm-footer {
-  position: absolute;
-  bottom: 35px;
-  left: 0;
-  right: 0;
-  padding: 0 15px;
+  background-image: url('../images/medical_background.jpg'); /* Apply the same background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
 }
 
 .tm-footer a {
@@ -747,4 +754,109 @@ p {
 .new-section .description {
   font-size: 18px;
   margin-bottom: 40px;
+}
+
+/* Custom styles for Mission and Vision boxes */
+.box {
+  border: 1px solid #007bff; /* Blue border */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.box h3 {
+  color: #007bff; /* Blue heading */
+  margin-bottom: 10px;
+}
+
+.box p {
+  color: #333; /* Dark text */
+}
+
+/* Leadership Team Section */
+.tm-testimonials-carousel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-image: url('./images/team_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 60px 0;
+  position: relative;
+}
+
+.tm-testimonial-item {
+  max-width: 290px;
+  margin: 20px;
+  text-align: center;
+  color: white;
+}
+
+.tm-testimonial-item img {
+  border-radius: 50%;
+  margin-bottom: 20px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.tm-testimonial-item figcaption {
+  font-style: normal;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+}
+
+.tm-bg-overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 70, 80, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+}
+
+/* Leadership Team Section */
+.tm-testimonials-carousel {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 60px 0;
+  position: relative;
+}
+
+.tm-testimonial-item {
+  max-width: 290px;
+  margin: 20px;
+  text-align: center;
+  color: white;
+}
+
+.tm-testimonial-item img {
+  border-radius: 50%;
+  margin-bottom: 20px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.tm-testimonial-item figcaption {
+  font-style: normal;
+  font-size: 1rem;
+}
+
+.tm-bg-overlay {
+  width: 100%;
+  height: 100%;
+  background: url('../img/infinite-loop-02.jpg') no-repeat center center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
 }
