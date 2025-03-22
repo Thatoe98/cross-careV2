@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.classList.toggle('active');
     });
 });
+
 $(document).ready(function() {
     // Smooth scrolling for navigation links
     $('a.tm-nav-link').on('click', function(event) {
@@ -48,10 +49,18 @@ $(document).ready(function() {
             event.preventDefault();
             var hash = this.hash;
             $('html, body').animate({
-                scrollTop: $(hash).offset().top
+                scrollTop: $(hash).offset().top - $('.tm-navbar').outerHeight() // Adjust scroll position to account for fixed navbar
             }, 800, function(){
                 window.location.hash = hash;
             });
         }
+    });
+
+    // Smooth scrolling for hero section link
+    $('a[href="#infinite"]').on('click', function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#infinite').offset().top - $('.tm-navbar').outerHeight() // Adjust scroll position to account for fixed navbar
+        }, 800);
     });
 });
