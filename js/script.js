@@ -127,6 +127,27 @@ document.addEventListener('DOMContentLoaded', function() {
         updateCarousel();
     });
 
+    // Add touch event listeners for mobile swipe functionality
+    let startX = 0;
+    let endX = 0;
+
+    carouselInner.addEventListener('touchstart', (event) => {
+        startX = event.touches[0].clientX;
+    });
+
+    carouselInner.addEventListener('touchmove', (event) => {
+        endX = event.touches[0].clientX;
+    });
+
+    carouselInner.addEventListener('touchend', () => {
+        if (startX > endX) {
+            currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
+        } else {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
+        }
+        updateCarousel();
+    });
+
     // Initialize carousel
     updateCarousel();
 });
