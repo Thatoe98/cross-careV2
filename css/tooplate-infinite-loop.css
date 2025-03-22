@@ -732,3 +732,19 @@ p {
     background-repeat: no-repeat;
   }
 }
+
+/* Add custom styles for the new section */
+.new-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.new-section .icon {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.new-section .description {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
