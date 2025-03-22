@@ -144,8 +144,7 @@ blockquote {
   color: #707070;
 }
 
-/* Hero */
-
+/* Hero Section */
 .tm-hero-section {
   background-image: url('../images/medical_background.jpg');
   background-size: cover; /* Ensure the background covers the entire section */
@@ -155,6 +154,26 @@ blockquote {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-top: -80px; /* Adjust to cover all the way to the top */
+  padding-top: 80px; /* Adjust to account for the navbar height */
+  position: relative;
+}
+
+.tm-hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.5); /* Add a white overlay with 50% transparency */
+  z-index: 1;
+}
+
+.tm-hero-text-container,
+.tm-hero-text-container-inner {
+  position: relative;
+  z-index: 2;
 }
 
 @media (min-height: 600px) and (min-width: 1920px) {
@@ -589,15 +608,6 @@ figure.effect-honey:hover h2 i {
   color: white;
 }
 
-.tm-footer {
-  background-image: url('../images/medical_background.jpg'); /* Apply the same background image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
 
 .tm-footer a {
 	color: #fff;
