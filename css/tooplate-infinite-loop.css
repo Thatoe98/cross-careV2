@@ -176,6 +176,14 @@ blockquote {
   z-index: 2;
 }
 
+.tm-hero-logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+
+
 @media (min-height: 600px) and (min-width: 1920px) {
   #infinite {
     background-size: cover;
@@ -216,11 +224,6 @@ tm-hero-text-container {
 
 .tm-hero-text-container-inner {
   margin-top: 50px; /* Adjust this value to move the text lower */
-}
-
-.tm-hero-title {
-  font-size: 3.5rem;
-  color: rgb(255, 8, 8); /* Change hero title font color to red */
 }
 
 .tm-hero-subtitle {
@@ -731,12 +734,6 @@ p {
     margin: 0;
   }
 }
-.tm-hero-title {
-    font-size: 3.5rem;
-    text-shadow: 2px 2px 5px #333, 0 0 25px blue, 0 0 5px red;
-    color: #007bff; /* Blue theme */
-}
-
 .tm-hero-subtitle {
     text-shadow: 1px 1px 3px #333;
     color: #ff0000; /* Red theme */
