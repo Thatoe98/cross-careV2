@@ -788,7 +788,6 @@ p {
     overflow-x: auto;
     padding: 60px 0;
     align-items: center;
-    padding-left: 30px;
 }
 
 .tm-testimonial-item {
@@ -825,6 +824,7 @@ p {
     .tm-testimonials-list {
         flex-wrap: wrap;
         overflow-x: visible;
+        justify-content: center;
     }
 }
 
