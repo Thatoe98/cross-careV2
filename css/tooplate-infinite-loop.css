@@ -782,50 +782,59 @@ p {
 }
 
 /* Leadership Team Section */
-.tm-testimonials-carousel {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-  padding: 60px 0;
-}
-
-.tm-testimonials-carousel::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url('./images/team_background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  opacity: 0.8; /* Add transparency to the background image */
-  z-index: 1;
+.tm-testimonials-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 60px 0;
+    align-items: center;
+    padding-left: 100px;
 }
 
 .tm-testimonial-item {
-  max-width: 290px;
-  margin: 20px;
-  text-align: center;
-  color: white;
-  position: relative;
-  z-index: 2;
+    flex: 0 0 auto;
+    max-width: 290px;
+    margin: 20px;
+    text-align: center;
+    color: rgb(0, 0, 0); /* Change text color to black */
 }
 
 .tm-testimonial-item img {
-  border-radius: 50%;
-  margin-bottom: 20px;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
 .tm-testimonial-item figcaption {
-  font-style: normal;
-  font-size: 1rem;
-  color: rgb(0, 0, 0);
+    font-style: normal;
+    font-size: 1rem;
+    color: rgb(0, 0, 0); /* Change text color to black */
+}
+
+.tm-testimonial-item h3 {
+    color: rgb(0, 0, 0); /* Change header color to black */
+}
+
+.tm-testimonial-item p {
+    color: rgb(0, 0, 0); /* Change paragraph color to black */
+}
+
+@media (min-width: 768px) {
+    .tm-testimonials-list {
+        flex-wrap: wrap;
+        overflow-x: visible;
+    }
+}
+
+/* Remove carousel styles */
+.slick-carousel,
+.slick-slide,
+.slick-prev,
+.slick-next,
+.slick-dots {
+    display: none !important;
 }
 
 .tm-bg-overlay {

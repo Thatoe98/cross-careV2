@@ -20,31 +20,7 @@ $(document).ready(function() {
         }, 800);
     });
 
-    // Initialize slick carousel for Leadership Team
-    $('.tm-testimonials-carousel').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: true,
-        prevArrow: '<button class="carousel-arrow left-arrow"><i class="fas fa-chevron-left"></i></button>',
-        nextArrow: '<button class="carousel-arrow right-arrow"><i class="fas fa-chevron-right"></i></button>',
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
-    });
+    
 });
 
 document.addEventListener("DOMContentLoaded", function() {
