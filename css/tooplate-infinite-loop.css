@@ -786,12 +786,23 @@ p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
+  padding: 60px 0;
+}
+
+.tm-testimonials-carousel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-image: url('./images/team_background.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  padding: 60px 0;
-  position: relative;
+  opacity: 0.8; /* Add transparency to the background image */
+  z-index: 1;
 }
 
 .tm-testimonial-item {
@@ -799,6 +810,8 @@ p {
   margin: 20px;
   text-align: center;
   color: white;
+  position: relative;
+  z-index: 2;
 }
 
 .tm-testimonial-item img {
