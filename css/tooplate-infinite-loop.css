@@ -343,7 +343,7 @@ tm-hero-text-container {
 }
 
 .tm-testimonial-item figcaption {
-  text-align: right;
+  text-align: left;
   font-style: italic;
   font-size: 1.1rem;
 }
