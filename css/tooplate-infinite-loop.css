@@ -228,7 +228,7 @@ tm-hero-text-container {
 
 .tm-hero-subtitle {
     font-size: 1.5rem;
-    color: #1b00a0; /* Change hero subtitle font color to black */
+    color: #00008B; /* Change hero subtitle font color to deep blue */
     font-family: 'Raleway', sans-serif; /* Use a more beautiful font */
     text-shadow: none; /* Remove text shadow */
 }
