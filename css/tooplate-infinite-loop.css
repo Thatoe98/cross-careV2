@@ -892,3 +892,26 @@ p {
   z-index: -1;
 }
 
+/* Custom styles for the "form" button */
+.btn-primary {
+    background-color: #00008B; /* Deep blue background */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for 3D effect */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Add transition for hover and press animation */
+}
+
+.btn-primary:hover {
+    background-color: #add8e6; /* Pale blue on hover */
+}
+
+.btn-primary:active {
+    transform: scale(0.95); /* Scale down slightly when pressed */
+}
+
+.btn-primary:focus {
+    background-color: #00008B; /* Ensure background color returns to default */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ensure shadow returns to default */
+    transform: scale(1); /* Ensure scale returns to default */
+    color:white;
+} 
+
