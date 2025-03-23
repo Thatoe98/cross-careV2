@@ -9,6 +9,11 @@ $(document).ready(function() {
             }, 800, function(){
                 window.location.hash = hash;
             });
+
+            // Close the dropdown menu if open
+            if ($('.navbar-collapse').hasClass('show')) {
+                $('.navbar-toggler').click();
+            }
         }
     });
 
@@ -18,6 +23,11 @@ $(document).ready(function() {
         $('html, body').animate({
             scrollTop: $('#infinite').offset().top - $('.tm-navbar').outerHeight() // Adjust scroll position to account for fixed navbar
         }, 800);
+
+        // Close the dropdown menu if open
+        if ($('.navbar-collapse').hasClass('show')) {
+            $('.navbar-toggler').click();
+        }
     });
 
     
