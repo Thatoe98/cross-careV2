@@ -202,13 +202,16 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
-                        <video controls muted poster="./images/thu_kha_thumbnail.png" style="width: 100%; height: auto;">
-                            <source src="./videos/thu_kha_video.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <div class="video-container">
+                            <video id="thukhaVideo" controls muted poster="./images/thu_kha_thumbnail.png" style="width: 100%; height: auto;">
+                                <source src="./videos/thu_kha_video.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="play-button"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </div> 
         </section>
 
         <section id="hospitals" class="tm-section-pad-top">
@@ -328,5 +331,6 @@
     <script>
         AOS.init();
     </script>
+    
 </body>
 </html>
