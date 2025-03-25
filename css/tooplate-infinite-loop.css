@@ -550,15 +550,20 @@ figure.effect-honey:hover h2 i {
 /* Contact */
 
 #contact {
-  color: white;
-  background-color: #001828;
-  background-image: url(../img/infinite-loop-03.jpg);
-  background-position: center;
+  color: rgb(0, 0, 0);
+  background-image: url('../images/cs_background.jpg'); /* Ensure the correct path to the background image */
+   /* Ensure the background image covers the entire section */
+  background-position: center; /* Ensure the background is centered */
   background-repeat: no-repeat;
-  min-height: 980px;
   position: relative;
   padding-bottom: 50px;
   padding-top: 100px;
+}
+
+#contact .contact-details a[href^="tel:"] {
+  font-family: Arial, sans-serif; /* Change font style to something more readable */
+  color: rgb(36, 3, 255); /* Change color to white */
+  font-weight: bold; /* Make the font bold */
 }
 
 .contact-item {
@@ -648,7 +653,7 @@ p {
 .lang-button {
   background-color: transparent;
   border: none;
-  color: #007bff; /* Change button text color to blue */
+  color: #f52727; /* Change button text color to blue */
   font-size: 1rem;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -656,7 +661,7 @@ p {
 
 .lang-button:hover,
 .lang-button:focus {
-  color: #0056b3; /* Slightly darker blue on hover */
+  color: #7e0101; /* Slightly darker blue on hover */
   outline: none;
 }
 
