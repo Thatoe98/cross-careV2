@@ -1,11 +1,3 @@
-/*
-
-Tooplate 2117 Infinite Loop
-
-https://www.tooplate.com/view/2117-infinite-loop
-
-*/
-
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
 
 body {
@@ -82,7 +74,7 @@ blockquote {
   top: 0;
   width: 100%;
   z-index: 1000;
-  background-color: transparent;
+  background-color: rgba(0, 13, 52, 0.3); /* Change navbar background color to black with 50% opacity */
   transition: all 0.3s ease;
 }
 
