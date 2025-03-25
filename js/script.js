@@ -161,3 +161,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     observer.observe(video);
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    AOS.init({
+        duration: 1000, // Animation duration
+        easing: 'ease-in-out', // Animation easing
+        once: true // Whether animation should happen only once
+    });
+});
