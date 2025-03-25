@@ -44,6 +44,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.location.href = "index_mm.html"; // Switch to Myanmar version
             }
         });
+
+        langButton.addEventListener("touchstart", function() {
+            const currentLang = document.documentElement.lang;
+            if (currentLang === "my") {
+                window.location.href = "index.html"; // Switch to English version
+            } else {
+                window.location.href = "index_mm.html"; // Switch to Myanmar version
+            }
+        });
+
+        const currentLang = document.documentElement.lang;
+        if (currentLang === "en") {
+            langButton.innerHTML = '<i class="fas fa-flag-uk"></i> English';
+        } else if (currentLang === "my") {
+            langButton.innerHTML = '<i class="fas fa-flag-mm"></i> မြန်မာ';
+        }
     }
 });
 
@@ -60,24 +76,6 @@ document.addEventListener('DOMContentLoaded', function() {
             section.scrollIntoView({ behavior: 'smooth' });
             sidebar.classList.remove('active'); // Close sidebar on tab click
         });
-    });
-
-    currentLangButton.addEventListener('click', () => {
-        const currentLang = document.documentElement.lang;
-        if (currentLang === 'en') {
-            window.location.href = 'index_mm.html';
-        } else if (currentLang === 'my') {
-            window.location.href = 'index.html';
-        }
-    });
-
-    currentLangButton.addEventListener('touchstart', () => {
-        const currentLang = document.documentElement.lang;
-        if (currentLang === 'en') {
-            window.location.href = 'index_mm.html';
-        } else if (currentLang === 'my') {
-            window.location.href = 'index.html';
-        }
     });
 
     const currentLang = document.documentElement.lang;
