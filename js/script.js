@@ -137,6 +137,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize carousel
     updateCarousel();
 });
+
 document.addEventListener('DOMContentLoaded', function() {
     var video = document.getElementById('thukhaVideo');
     var observer = new IntersectionObserver(function(entries) {

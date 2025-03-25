@@ -913,5 +913,30 @@ p {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ensure shadow returns to default */
     transform: scale(1); /* Ensure scale returns to default */
     color:white;
-} 
+}
+
+/* Doctor List */
+.doctor-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.doctor-list li {
+    font-size: 1.1rem;
+    color: #333; /* Dark text color */
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.doctor-list li::before {
+    content: "\f0f0"; /* FontAwesome icon for user-md */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #007bff; /* Blue icon color */
+}
 
