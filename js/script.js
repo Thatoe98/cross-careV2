@@ -30,7 +30,18 @@ $(document).ready(function() {
         }
     });
 
-    
+    // Smooth scrolling for navbar-brand link
+    $('a.navbar-brand').on('click', function(event) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800);
+
+        // Close the dropdown menu if open
+        if ($('.navbar-collapse').hasClass('show')) {
+            $('.navbar-toggler').click();
+        }
+    });
 });
 
 document.addEventListener("DOMContentLoaded", function() {
