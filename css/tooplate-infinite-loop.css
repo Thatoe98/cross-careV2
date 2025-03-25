@@ -84,9 +84,25 @@ blockquote {
 }
 
 .navbar-brand {
-  color: #ff0000; /* Change Cross-Care font color to red */
-  font-size: 1.4rem;
-  font-weight: bold;
+  font-size: 2rem;
+    font-weight: bold;
+    color: transparent;
+    background-image: url('https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3176.jpg'); 
+    background-size: 200%; /* Enlarged for smooth animation */
+    background-position: 0 50%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-background 5s infinite alternate linear;
+}
+
+@keyframes animate-background {
+    0% {
+        background-position: 0 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
 }
 
 .navbar-brand:hover,
