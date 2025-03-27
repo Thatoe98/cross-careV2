@@ -937,7 +937,7 @@ p {
 
 .doctor-list li {
     font-size: 1.1rem;
-    color: #333; /* Dark text color */
+    color: #000000; /* Dark text color */
     margin-bottom: 10px;
     padding-left: 20px;
     position: relative;
@@ -953,3 +953,28 @@ p {
     color: #007bff; /* Blue icon color */
 }
 
+#doctor_image {
+  float: right;
+  max-width: 30%;
+  height: auto;
+  margin-top: -100px; /* Adjust the value as needed */
+}
+
+
+
+#partners {
+  background-image: url("../images/blue_background.jpg");
+  background-size: cover;
+  background-position: right;
+  color: rgb(0, 0, 0);
+}
+
+
+
+#services {
+  background-image: url("../images/blue_background.jpg");
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  color: rgb(0, 0, 0);
+}
