@@ -1,0 +1,143 @@
+{
+  "company": {
+    "name": "Cross-Care Medical Services",
+    "tagline": "Bridging Healthcare Between Myanmar and Thailand",
+    "description": "Cross-Care Medical Consultant helps people from Myanmar access quality medical care in Thailand through comprehensive referral services and trusted hospital partnerships.",
+    "mission": "To provide seamless access to quality healthcare for Myanmar citizens seeking medical treatment in Thailand",
+    "established": "Providing medical referral services",
+    "languages": ["Myanmar (Burmese)", "English", "Thai"],
+    "countries": {
+      "from": "Myanmar (Burma)",
+      "to": "Thailand"
+    }
+  },
+  "services": [
+    {
+      "name": "Medical Referral Services",
+      "description": "Complete coordination between Myanmar patients and Thai hospitals",
+      "details": [
+        "Hospital selection based on medical needs",
+        "Medical record translation and coordination",
+        "Appointment scheduling and management",
+        "Treatment plan coordination"
+      ]
+    },
+    {
+      "name": "Hospital Partnership Coordination", 
+      "description": "Working with trusted hospital partners across Thailand",
+      "details": [
+        "Pre-screened quality hospitals",
+        "Specialized medical departments",
+        "Cost-effective treatment options",
+        "Cultural and language support"
+      ]
+    },
+    {
+      "name": "Patient Support Services",
+      "description": "Comprehensive support throughout the medical journey",
+      "details": [
+        "Pre-treatment consultation",
+        "Travel and accommodation guidance",
+        "Translation services",
+        "Follow-up care coordination"
+      ]
+    },
+    {
+      "name": "Medical Consultation",
+      "description": "Expert medical guidance and second opinions",
+      "details": [
+        "Specialist consultations",
+        "Treatment option reviews",
+        "Medical record analysis",
+        "Referral recommendations"
+      ]
+    }
+  ],
+  "specialties": [
+    "Cardiology and Heart Surgery",
+    "Oncology and Cancer Treatment", 
+    "Orthopedics and Joint Surgery",
+    "Neurology and Brain Surgery",
+    "Gastroenterology",
+    "Urology",
+    "Gynecology and Obstetrics",
+    "Pediatrics",
+    "Plastic and Reconstructive Surgery",
+    "Emergency Medicine",
+    "General Surgery",
+    "Internal Medicine"
+  ],
+  "locations": {
+    "thailand_coverage": [
+      "Bangkok - Major hospitals and medical centers",
+      "Phuket - Tourism medical services", 
+      "Chiang Mai - Northern Thailand coverage",
+      "Pattaya - Coastal region medical services",
+      "Hua Hin - Resort area medical care"
+    ]
+  },
+  "contact": {
+    "website": "Contact form available on website",
+    "facebook": "Cross-Care Medical Services",
+    "facebook_url": "https://www.facebook.com/share/1D8nLa1aMj/",
+    "consultation_form": "https://docs.google.com/forms/d/e/1FAIpQLSfxUoOyY_IBER3C-rCNIxHzmH-fJOROCkBuFexFl8UUV7WNMw/viewform?usp=header",
+    "response_time": "We respond promptly to all inquiries",
+    "availability": "Available for consultations and emergency coordination"
+  },
+  "process": {
+    "steps": [
+      "Contact Cross-Care through website form or Facebook",
+      "Initial consultation and medical record review",
+      "Hospital and specialist selection based on needs",
+      "Appointment coordination and scheduling", 
+      "Travel and treatment preparation assistance",
+      "Ongoing support during treatment",
+      "Follow-up care coordination"
+    ]
+  },
+  "faqs": [
+    {
+      "question": "How do I start the process?",
+      "answer": "Fill out our contact form on the website or message us on Facebook. Our team will guide you through the initial consultation process."
+    },
+    {
+      "question": "What are the costs involved?",
+      "answer": "Costs vary depending on the medical treatment needed and hospital chosen. Contact us directly for personalized pricing information based on your specific medical requirements."
+    },
+    {
+      "question": "Do you provide translation services?",
+      "answer": "Yes, we provide translation and interpretation services in Myanmar, English, and Thai to ensure clear communication with medical staff."
+    },
+    {
+      "question": "How long does the process take?",
+      "answer": "Timeline depends on the medical urgency and treatment type. Emergency cases can be coordinated within 24-48 hours, while routine appointments typically take 1-2 weeks to arrange."
+    },
+    {
+      "question": "What documents do I need?",
+      "answer": "You'll need medical records, passport, and any previous test results. Our team will guide you through the complete documentation requirements."
+    },
+    {
+      "question": "Do you help with accommodation?",
+      "answer": "Yes, we provide guidance on accommodation options near the hospitals, including patient-friendly hotels and extended stay facilities."
+    },
+    {
+      "question": "What if I need emergency treatment?",
+      "answer": "For medical emergencies, contact local emergency services immediately. For urgent medical coordination, reach out to us directly and we'll provide priority assistance."
+    },
+    {
+      "question": "Are your services available 24/7?",
+      "answer": "We monitor our communication channels regularly and provide emergency coordination support. Contact us through Facebook or our website form for urgent matters."
+    }
+  ],
+  "emergency_info": {
+    "urgent_cases": "For urgent medical coordination, contact us immediately through Facebook or website form",
+    "emergency_services": "For life-threatening emergencies, call local emergency services first (Thailand: 191)",
+    "priority_support": "We provide expedited service for urgent medical cases"
+  },
+  "payment_info": {
+    "consultation": "Initial consultation to discuss your medical needs and options",
+    "coordination": "Service fees for hospital coordination and appointment management", 
+    "transparency": "All costs discussed upfront with no hidden fees",
+    "payment_methods": "Multiple payment options available - discussed during consultation"
+  }
+}
