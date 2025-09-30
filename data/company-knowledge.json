@@ -4,12 +4,43 @@
     "tagline": "Bridging Healthcare Between Myanmar and Thailand",
     "description": "Cross-Care Medical Consultant helps people from Myanmar access quality medical care in Thailand through comprehensive referral services and trusted hospital partnerships.",
     "mission": "To provide seamless access to quality healthcare for Myanmar citizens seeking medical treatment in Thailand",
-    "established": "Providing medical referral services",
+    "established": "Providing medical referral services since our founding",
     "languages": ["Myanmar (Burmese)", "English", "Thai"],
     "countries": {
       "from": "Myanmar (Burma)",
       "to": "Thailand"
     }
+  },
+  "team": {
+    "overview": "Cross-Care has a dedicated team of medical coordinators and healthcare professionals who specialize in Myanmar-Thailand medical referrals",
+    "structure": {
+      "medical_coordinators": "Experienced professionals who understand both Myanmar and Thai healthcare systems",
+      "translation_specialists": "Native Myanmar and Thai speakers who facilitate medical communication",
+      "patient_advocates": "Dedicated staff who guide patients through the entire medical journey",
+      "partnership_liaisons": "Professionals who maintain relationships with hospital partners across Thailand"
+    },
+    "expertise": [
+      "Myanmar healthcare system knowledge",
+      "Thai medical facility partnerships", 
+      "Medical translation and interpretation",
+      "Cross-cultural patient care",
+      "Emergency medical coordination",
+      "Insurance and payment coordination",
+      "Travel and accommodation assistance"
+    ],
+    "doctors_consultants": {
+      "note": "Cross-Care works with a network of qualified medical consultants and doctors",
+      "description": "Our medical team includes licensed healthcare professionals who provide initial consultations and coordinate with Thai specialists",
+      "specializations": [
+        "General Medicine consultants for initial assessments",
+        "Specialist referral coordinators for complex cases",
+        "Emergency medicine coordinators for urgent cases",
+        "Preventive care advisors for health screenings"
+      ],
+      "consultation_process": "Our doctors provide initial consultations and coordinate with Thai hospital specialists for comprehensive care"
+    },
+    "qualifications": "All team members are trained in medical coordination, cultural sensitivity, and emergency response protocols",
+    "availability": "Our team is available for consultations and emergency coordination"
   },
   "services": [
     {
@@ -97,6 +128,18 @@
   },
   "faqs": [
     {
+      "question": "Who are your doctors and medical team?",
+      "answer": "Cross-Care has a dedicated team of medical coordinators, licensed healthcare consultants, and specialists who work with our Thai hospital partners. Our medical team includes general medicine consultants for initial assessments and specialist coordinators for complex cases. All team members are experienced in Myanmar-Thailand medical referrals and cross-cultural patient care."
+    },
+    {
+      "question": "Can I speak with your doctors directly?",
+      "answer": "Yes, our medical consultants are available for initial consultations and will coordinate with Thai specialists for your specific needs. Contact us to schedule a consultation with our medical team."
+    },
+    {
+      "question": "What qualifications do your team members have?",
+      "answer": "Our team includes licensed medical professionals, certified translation specialists, and trained patient advocates. All members are experienced in Myanmar-Thailand healthcare coordination and emergency response protocols."
+    },
+    {
       "question": "How do I start the process?",
       "answer": "Fill out our contact form on the website or message us on Facebook. Our team will guide you through the initial consultation process."
     },
@@ -139,5 +182,26 @@
     "coordination": "Service fees for hospital coordination and appointment management", 
     "transparency": "All costs discussed upfront with no hidden fees",
     "payment_methods": "Multiple payment options available - discussed during consultation"
+  },
+  "medical_response_guidelines": {
+    "purpose": "Guidelines for responding to medical questions",
+    "approach": "Provide brief, helpful information while emphasizing professional medical consultation",
+    "common_conditions": {
+      "heart_disease": "Heart conditions require specialized cardiology care. Thailand has excellent cardiac centers with advanced treatments including bypass surgery, angioplasty, and heart valve procedures.",
+      "cancer": "Cancer treatment in Thailand includes comprehensive oncology services with chemotherapy, radiation therapy, immunotherapy, and surgical options. Early detection and treatment planning are crucial.",
+      "diabetes": "Diabetes management involves blood sugar monitoring, medication, diet control, and regular check-ups. Thai hospitals offer comprehensive diabetes care programs.",
+      "hypertension": "High blood pressure can be managed with medication, lifestyle changes, and regular monitoring. Thai medical facilities provide excellent cardiovascular care.",
+      "kidney_disease": "Kidney conditions may require dialysis, medication, or transplant procedures. Thailand has advanced nephrology departments and dialysis centers.",
+      "stroke": "Stroke requires immediate emergency care followed by rehabilitation. Thai hospitals have specialized stroke units and comprehensive recovery programs.",
+      "orthopedic": "Bone and joint problems can be treated with physiotherapy, medication, or surgery. Thailand is renowned for orthopedic procedures and joint replacements."
+    },
+    "emergency_symptoms": {
+      "chest_pain": "Chest pain could indicate a heart attack - seek immediate emergency medical attention",
+      "difficulty_breathing": "Severe breathing problems require immediate emergency care",
+      "severe_headache": "Sudden severe headache could indicate stroke - seek emergency care immediately",
+      "loss_consciousness": "Loss of consciousness requires immediate emergency medical attention"
+    },
+    "disclaimer": "This information is for general guidance only and does not replace professional medical advice. Contact Cross-Care to consult with our doctors for personalized medical guidance and proper diagnosis.",
+    "consultation_reminder": "For any medical concerns, please contact Cross-Care to speak with our medical team who can provide proper consultation and coordinate with Thai specialists for your specific needs."
   }
 }
