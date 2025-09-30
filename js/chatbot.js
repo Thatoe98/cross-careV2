@@ -104,7 +104,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         const messageContent = document.createElement('div');
         messageContent.classList.add('message-content');
-        messageContent.textContent = message;
+        
+        // Use innerHTML for bot messages to allow hyperlinks, textContent for user messages for security
+        if (sender === 'bot') {
+            messageContent.innerHTML = message;
+        } else {
+            messageContent.textContent = message;
+        }
         
         messageDiv.appendChild(messageContent);
         chatMessages.appendChild(messageDiv);
