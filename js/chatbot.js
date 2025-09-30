@@ -139,6 +139,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     async function getBotResponse(userMessage) {
         try {
+            console.log('Calling API with message:', userMessage);
+            
             // Call the Vercel serverless function
             const response = await fetch('/api/chatbot', {
                 method: 'POST',
@@ -151,15 +153,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 })
             });
 
+            console.log('API response status:', response.status);
+
             if (response.ok) {
                 const data = await response.json();
+                console.log('API response data:', data);
                 return data.response || "I'm sorry, I couldn't process that request. Please try again or contact us directly.";
             } else {
-                const errorData = await response.json();
-                return errorData.error || "I'm experiencing technical difficulties. Please try again later or contact us through our website form.";
+                const errorText = await response.text();
+                console.error('API error response:', errorText);
+                
+                // Try to parse as JSON, fallback to text
+                let errorMessage;
+                try {
+                    const errorData = JSON.parse(errorText);
+                    errorMessage = errorData.error || errorText;
+                } catch (e) {
+                    errorMessage = errorText;
+                }
+                
+                return `I'm experiencing technical difficulties: ${errorMessage}. Please contact us through our website form or Facebook page.`;
             }
         } catch (error) {
             console.error('Error calling chatbot API:', error);
+            
+            // Check if it's a network error or API not found
+            if (error.message.includes('fetch')) {
+                return "I'm having trouble connecting to our AI service. This might be because the API endpoint is not properly deployed. Please contact us directly through our website form or Facebook page for immediate assistance.";
+            }
             
             // Fallback to basic responses if API fails
             const message = userMessage.toLowerCase().trim();

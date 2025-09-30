@@ -18,9 +18,13 @@ export default async function handler(req, res) {
   }
 
   try {
+    console.log('API called with method:', req.method);
+    console.log('Request body:', req.body);
+
     const { message, conversationHistory = [] } = req.body;
 
     if (!message || typeof message !== 'string') {
+      console.log('Invalid message provided:', message);
       return res.status(400).json({ error: 'Message is required' });
     }
 
@@ -29,11 +33,15 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Message too long' });
     }
 
+    console.log('Processing message:', message);
+
     // Load company knowledge base
     const knowledgeBase = await loadCompanyKnowledge();
+    console.log('Knowledge base loaded successfully');
 
     // Create system prompt with company context
     const systemPrompt = createSystemPrompt(knowledgeBase);
+    console.log('System prompt created');
 
     // Prepare conversation history for OpenAI
     const messages = [
@@ -42,23 +50,27 @@ export default async function handler(req, res) {
       { role: 'user', content: message }
     ];
 
+    console.log('Calling OpenAI API...');
+
     // Call OpenAI API
     const openaiResponse = await callOpenAI(messages);
 
-    // Log for debugging (remove in production)
-    console.log('User message:', message);
-    console.log('AI response:', openaiResponse);
+    console.log('OpenAI API response received:', openaiResponse);
 
     return res.status(200).json({
       response: openaiResponse,
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
+      debug: 'API working correctly'
     });
 
   } catch (error) {
     console.error('Chatbot API error:', error);
+    console.error('Error stack:', error.stack);
+    
     return res.status(500).json({
-      error: 'I apologize, but I\'m experiencing technical difficulties. Please try again later or contact us directly through our website form or Facebook page.',
-      timestamp: new Date().toISOString()
+      error: `I apologize, but I'm experiencing technical difficulties: ${error.message}. Please try again later or contact us directly through our website form or Facebook page.`,
+      timestamp: new Date().toISOString(),
+      debug: error.message
     });
   }
 }
@@ -117,9 +129,26 @@ LANGUAGE: Respond in English unless specifically asked to use another language.`
 async function callOpenAI(messages) {
   const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
   
+  console.log('OpenAI API Key available:', !!OPENAI_API_KEY);
+  console.log('API Key starts with:', OPENAI_API_KEY ? OPENAI_API_KEY.substring(0, 20) + '...' : 'NOT FOUND');
+  
   if (!OPENAI_API_KEY) {
     throw new Error('OpenAI API key not configured. Please set OPENAI_API_KEY in Vercel environment variables.');
   }
+
+  const requestPayload = {
+    model: 'gpt-3.5-turbo',
+    messages: messages,
+    max_tokens: 300,
+    temperature: 0.7,
+    presence_penalty: 0.1,
+    frequency_penalty: 0.1,
+  };
+
+  console.log('Sending request to OpenAI with payload:', {
+    ...requestPayload,
+    messages: messages.map(m => ({ role: m.role, content: m.content.substring(0, 100) + '...' }))
+  });
 
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
@@ -127,27 +156,27 @@ async function callOpenAI(messages) {
       'Authorization': `Bearer ${OPENAI_API_KEY}`,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({
-      model: 'gpt-3.5-turbo',
-      messages: messages,
-      max_tokens: 300,
-      temperature: 0.7,
-      presence_penalty: 0.1,
-      frequency_penalty: 0.1,
-    }),
+    body: JSON.stringify(requestPayload),
   });
+
+  console.log('OpenAI response status:', response.status);
+  console.log('OpenAI response headers:', Object.fromEntries(response.headers.entries()));
 
   if (!response.ok) {
     const error = await response.text();
-    console.error('OpenAI API error:', error);
-    throw new Error('OpenAI API call failed');
+    console.error('OpenAI API error response:', error);
+    throw new Error(`OpenAI API call failed with status ${response.status}: ${error}`);
   }
 
   const data = await response.json();
+  console.log('OpenAI response data:', data);
   
   if (data.choices && data.choices[0] && data.choices[0].message) {
-    return data.choices[0].message.content.trim();
+    const responseText = data.choices[0].message.content.trim();
+    console.log('Extracted response text:', responseText);
+    return responseText;
   } else {
+    console.error('Unexpected response format:', data);
     throw new Error('Unexpected OpenAI API response format');
   }
 }
