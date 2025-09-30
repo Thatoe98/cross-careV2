@@ -48,11 +48,12 @@ STEP 1: SET UP VERCEL ENVIRONMENT VARIABLE
 
 STEP 2: DEPLOY TO VERCEL
 ------------------------
-Your files are ready! Push to your repository:
+Your files are ready! Since you're using another Vercel domain, 
+the deployment will automatically update when you push:
 
 git push origin main
 
-Vercel will automatically deploy your changes.
+Vercel will automatically deploy your enhanced chatbot changes.
 
 STEP 3: TEST THE ENHANCED CHATBOT
 ---------------------------------
