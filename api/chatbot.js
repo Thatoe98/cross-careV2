@@ -1,6 +1,3 @@
-import fs from 'fs';
-import path from 'path';
-
 // This is a Vercel serverless function that handles chatbot requests
 export default async function handler(req, res) {
   // Set CORS headers for your domain
@@ -76,21 +73,52 @@ export default async function handler(req, res) {
 }
 
 async function loadCompanyKnowledge() {
-  try {
-    // In Vercel, we need to read from the file system differently
-    const knowledgePath = path.join(process.cwd(), 'data', 'company-knowledge.json');
-    const knowledgeData = fs.readFileSync(knowledgePath, 'utf8');
-    return JSON.parse(knowledgeData);
-  } catch (error) {
-    console.error('Error loading knowledge base:', error);
-    // Fallback knowledge if file can't be loaded
-    return {
-      company: {
-        name: "Cross-Care Medical Services",
-        description: "Medical referral services between Myanmar and Thailand"
+  // Embed the knowledge base directly to avoid filesystem issues in Vercel
+  return {
+    "company": {
+      "name": "Cross-Care Medical Services",
+      "tagline": "Bridging Healthcare Between Myanmar and Thailand",
+      "description": "Cross-Care Medical Consultant helps people from Myanmar access quality medical care in Thailand through comprehensive referral services and trusted hospital partnerships.",
+      "mission": "To provide seamless access to quality healthcare for Myanmar citizens seeking medical treatment in Thailand",
+      "established": "Providing medical referral services since our founding",
+      "languages": ["Myanmar (Burmese)", "English", "Thai"],
+      "countries": {
+        "from": "Myanmar (Burma)",
+        "to": "Thailand"
       }
-    };
-  }
+    },
+    "team": {
+      "overview": "Cross-Care has a dedicated team of medical coordinators and healthcare professionals who specialize in Myanmar-Thailand medical referrals",
+      "structure": {
+        "medical_coordinators": "Experienced professionals who understand both Myanmar and Thai healthcare systems",
+        "translation_specialists": "Native Myanmar and Thai speakers who facilitate medical communication",
+        "patient_advocates": "Dedicated staff who guide patients through the entire medical journey",
+        "partnership_liaisons": "Professionals who maintain relationships with hospital partners across Thailand"
+      },
+      "expertise": [
+        "Myanmar healthcare system knowledge",
+        "Thai medical facility partnerships", 
+        "Medical translation and interpretation",
+        "Cross-cultural patient care",
+        "Emergency medical coordination",
+        "Insurance and payment coordination",
+        "Travel and accommodation assistance"
+      ],
+      "doctors_consultants": {
+        "note": "Cross-Care works with a network of qualified medical consultants and doctors",
+        "description": "Our medical team includes licensed healthcare professionals who provide initial consultations and coordinate with Thai specialists",
+        "specializations": [
+          "General Medicine consultants for initial assessments",
+          "Specialist referral coordinators for complex cases",
+          "Emergency medicine coordinators for urgent cases",
+          "Preventive care advisors for health screenings"
+        ],
+        "consultation_process": "Our doctors provide initial consultations and coordinate with Thai hospital specialists for comprehensive care"
+      },
+      "qualifications": "All team members are trained in medical coordination, cultural sensitivity, and emergency response protocols",
+      "availability": "Our team is available for consultations and emergency coordination"
+    }
+  };
 }
 
 function createSystemPrompt(knowledgeBase) {
