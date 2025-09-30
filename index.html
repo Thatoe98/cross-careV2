@@ -343,12 +343,45 @@
 
    
 
+    <!-- Chatbot -->
+    <div id="chatbot-container" aria-label="Cross-Care AI Assistant">
+        <!-- Chat Toggle Button -->
+        <button id="chat-toggle" class="chat-toggle" aria-label="Open Cross-Care AI Assistant" title="Chat with our AI assistant">
+            <i class="fas fa-comment-alt" aria-hidden="true"></i>
+        </button>
+        
+        <!-- Chat Box -->
+        <div id="chat-box" class="chat-box" role="dialog" aria-labelledby="chat-header-title" aria-hidden="true">
+            <div class="chat-header">
+                <h4 id="chat-header-title">Cross-Care Assistant</h4>
+                <button id="chat-close" class="chat-close" aria-label="Close chat" title="Close chat">
+                    <i class="fas fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div id="chat-messages" class="chat-messages" role="log" aria-live="polite" aria-label="Chat conversation">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Welcome to Cross-Care! I'm your AI assistant. How can I help you today?
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." 
+                       aria-label="Type your message" maxlength="500" autocomplete="off">
+                <button id="chat-send" class="chat-send" aria-label="Send message" title="Send message">
+                    <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="slick/slick.min.js"></script>
     <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/chatbot.js"></script>
     <script>
         AOS.init();
     </script>
