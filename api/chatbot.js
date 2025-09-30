@@ -115,7 +115,11 @@ LANGUAGE: Respond in English unless specifically asked to use another language.`
 }
 
 async function callOpenAI(messages) {
-  const OPENAI_API_KEY = process.env.OPENAI_API_KEY || '';
+  const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+  
+  if (!OPENAI_API_KEY) {
+    throw new Error('OpenAI API key not configured. Please set OPENAI_API_KEY in Vercel environment variables.');
+  }
 
   const response = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
